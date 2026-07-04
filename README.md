@@ -4,7 +4,7 @@ A Machine Learning-powered web application that predicts the likelihood of heart
 
 ## 🚀 Live Demo
 
-🔗 **Demo:** `[https://your-streamlit-app-url.streamlit.app](https://heart-disease-predictor-git-xv.streamlit.app/#heart-disease-prediction-app)`
+🔗 **Demo:** `https://heart-disease-predictor-git-xv.streamlit.app/#heart-disease-prediction-app`
 
 
 ---
