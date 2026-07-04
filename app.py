@@ -10,6 +10,8 @@ expected_columns = joblib.load("columns.pkl")
 st.title("Heart💓Disease Prediction App")
 st.markdown("Provide the following details to predict the likelihood of heart disease.")
 
+
+
 # Collect user input
 age = st.slider("Age", 18, 100, 40)
 sex = st.selectbox("Sex", ["M", "F"])
@@ -61,3 +63,53 @@ if st.button("Predict"):
         st.error("⚠️ High Risk of Heart Disease")
     else:
         st.success("✅ Low Risk of Heart Disease")
+
+st.markdown("---")
+
+st.subheader("📘 Feature Guide (What each input means)")
+
+with st.expander("Click to understand medical terms"):
+    st.markdown("""
+### 🫀 Chest Pain Types
+- **ATA (Atypical Angina):** Chest pain not fully typical of heart disease  
+- **NAP (Non-Anginal Pain):** Pain usually not related to heart  
+- **TA (Typical Angina):** Classic heart-related chest pain  
+- **ASY (Asymptomatic):** No chest pain even if disease exists  
+
+---
+
+### ⚡ ST Slope
+- **Up:** Normal recovery pattern (good sign)  
+- **Flat:** Possible abnormal blood flow  
+- **Down:** Strong sign of reduced heart blood flow  
+
+---
+
+### 📉 Oldpeak
+- Measures ST depression during exercise ECG  
+- Higher value → higher stress on heart  
+
+---
+
+### ❤️ Exercise-Induced Angina
+- **Y:** Chest pain during exercise  
+- **N:** No chest pain during exercise  
+
+---
+
+### 🧪 Resting ECG
+- **Normal:** No abnormality  
+- **ST:** ST-T wave abnormality (possible ischemia)  
+- **LVH:** Possible enlarged heart  
+
+---
+
+### 🍬 Fasting Blood Sugar
+- **0:** Normal (≤120 mg/dL)  
+- **1:** High (>120 mg/dL)  
+
+---
+
+### 📊 Max Heart Rate
+- Higher values usually indicate better heart fitness during exercise
+""")
